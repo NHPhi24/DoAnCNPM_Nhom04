@@ -1,29 +1,13 @@
 @import url(./base.css);
 
-.auth-container {
-    position: relative;
-    width: 100%;
-    max-width: 450px;
-}
-
-.auth-form {
+.register-container {
     background-color: var(--background-darker);
     border-radius: 10px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
     width: 100%;
+    max-width: 500px;
     padding: 40px;
     animation: fadeIn 0.5s ease-in-out;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.4s ease;
-}
-
-.auth-form.active {
-    opacity: 1;
-    pointer-events: all;
 }
 
 @keyframes fadeIn {
@@ -38,32 +22,54 @@
     }
 }
 
-.auth-header {
+.register-header {
     text-align: center;
     margin-bottom: 30px;
 }
 
-.auth-header h1 {
+.register-header h1 {
     font-size: 28px;
     margin-bottom: 10px;
     color: var(--text-light);
 }
 
-.auth-header p {
+.register-header p {
     color: var(--text-muted);
     font-size: 14px;
 }
 
-.auth-form-content .form-group {
+.form-row {
+    display: flex;
+    gap: 15px;
     margin-bottom: 20px;
 }
 
-.auth-form-content label {
+.half-width {
+    flex: 1;
+}
+
+.register-form .form-group {
+    margin-bottom: 20px;
+}
+
+.register-form label {
     display: block;
     margin-bottom: 8px;
     font-size: 14px;
     font-weight: 500;
     color: var(--text-light);
+}
+
+
+.form-group>#lastName {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-color);
+    font-size: 15px;
+    transition: all 0.3s ease;
 }
 
 .input-with-icon {
@@ -96,12 +102,6 @@
     box-shadow: 0 0 0 2px rgba(108, 92, 231, 0.2);
 }
 
-.password-hint {
-    margin-top: 5px;
-    color: var(--text-muted);
-    font-size: 12px;
-}
-
 .toggle-password {
     position: absolute;
     right: 50px;
@@ -115,29 +115,64 @@
     color: var(--text-color);
 }
 
-.form-options {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
-    font-size: 14px;
-}
-
-.remember-me,
-.terms-checkbox {
+.password-strength {
+    margin-top: 8px;
     display: flex;
     align-items: center;
-    cursor: pointer;
+    gap: 10px;
 }
 
-.remember-me input,
-.terms-checkbox input {
-    margin-right: 8px;
-    accent-color: var(--primary-color);
+.strength-meter {
+    display: flex;
+    gap: 2px;
+    flex: 1;
+}
+
+.strength-bar {
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--border-color);
+    flex: 1;
+    transition: all 0.3s ease;
+}
+
+.strength-bar.weak {
+    background-color: var(--error-color);
+}
+
+.strength-bar.medium {
+    background-color: var(--warning-color);
+}
+
+.strength-bar.strong {
+    background-color: var(--success-color);
+}
+
+.strength-text {
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.password-hint {
+    margin-top: 5px;
+    color: var(--text-muted);
+    font-size: 12px;
 }
 
 .terms-group {
     margin: 25px 0;
+}
+
+.terms-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.terms-checkbox input {
+    margin-right: 8px;
+    accent-color: var(--primary-color);
 }
 
 .terms-checkbox a {
@@ -150,18 +185,7 @@
     text-decoration: underline;
 }
 
-.forgot-password {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-.forgot-password:hover {
-    color: var(--primary-dark);
-    text-decoration: underline;
-}
-
-.auth-button {
+.register-button {
     width: 100%;
     padding: 14px;
     background-color: var(--primary-color);
@@ -174,36 +198,41 @@
     transition: background-color 0.3s;
 }
 
-.auth-button:hover {
+.register-button:hover {
     background-color: var(--primary-dark);
 }
 
-.auth-switch {
+.login-promt {
     text-align: center;
     margin-top: 25px;
     font-size: 14px;
     color: var(--text-muted);
 }
 
-.auth-switch a {
+.login-promt a {
     color: var(--primary-color);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.2s;
 }
 
-.auth-switch a:hover {
+.login-promt a:hover {
     color: var(--primary-dark);
     text-decoration: underline;
 }
 
 /* Responsive design */
-@media (max-width: 480px) {
-    .auth-form {
+@media (max-width: 600px) {
+    .register-container {
         padding: 30px 20px;
     }
 
-    .auth-header h1 {
+    .register-header h1 {
         font-size: 24px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 20px;
     }
 }

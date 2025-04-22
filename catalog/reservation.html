@@ -4,118 +4,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng nhập/Đăng ký - Dark Theme</title>
+    <title>Đăng ký - Dark Theme</title>
     <link rel="stylesheet" href="../Assets/css/resgistion.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
-<body>
-    <div class="auth-container">
-        <!-- Màn hình đăng nhập -->
-        <div class="login-container auth-form active" id="loginFormContainer">
-            <div class="auth-header">
-                <h1>Đăng nhập</h1>
-                <p>Vui lòng nhập thông tin đăng nhập của bạn</p>
-            </div>
-
-            <form id="loginForm" class="auth-form-content">
-                <div class="form-group">
-                    <label for="loginUsername">Tên đăng nhập</label>
-                    <div class="input-with-icon">
-                        <i class="fas fa-user"></i>
-                        <input type="text" id="loginUsername" name="username" placeholder="Nhập tên đăng nhập" required>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="loginPassword">Mật khẩu</label>
-                    <div class="input-with-icon">
-                        <i class="fas fa-lock"></i>
-                        <input type="password" id="loginPassword" name="password" placeholder="Nhập mật khẩu" required>
-                        <span class="toggle-password" onclick="togglePasswordVisibility('loginPassword')">
-                            <i class="fas fa-eye"></i>
-                        </span>
-                    </div>
-                </div>
-
-                <div class="form-options">
-                    <label class="remember-me">
-                        <input type="checkbox" name="remember"> Ghi nhớ đăng nhập
-                    </label>
-                    <a href="#" class="forgot-password">Quên mật khẩu?</a>
-                </div>
-
-                <button type="submit" class="auth-button">Đăng nhập</button>
-
-                <div class="auth-switch">
-                    Chưa có tài khoản? <a href="#" onclick="switchAuthForm('register')">Đăng ký ngay</a>
-                </div>
-            </form>
+<body class="bodyweb">
+    <div class="register-container">
+        <div class="register-header">
+            <h1>Tạo tài khoản mới</h1>
+            <p>Điền thông tin để bắt đầu trải nghiệm</p>
         </div>
 
-        <!-- Màn hình đăng ký -->
-        <div class="register-container auth-form" id="registerFormContainer">
-            <div class="auth-header">
-                <h1>Đăng ký tài khoản</h1>
-                <p>Tạo tài khoản để bắt đầu trải nghiệm</p>
-            </div>
-
-            <form id="registerForm" class="auth-form-content">
-                <div class="form-group">
-                    <label for="registerUsername">Tên đăng nhập</label>
+        <form id="registerForm" class="register-form">
+            <div class="form-row">
+                <div class="form-group half-width">
+                    <label for="firstName">Họ</label>
                     <div class="input-with-icon">
                         <i class="fas fa-user"></i>
-                        <input type="text" id="registerUsername" name="username" placeholder="Nhập tên đăng nhập"
-                            required>
+                        <input type="text" id="firstName" name="firstName" placeholder="Nhập họ của bạn" required>
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="registerEmail">Email</label>
-                    <div class="input-with-icon">
-                        <i class="fas fa-envelope"></i>
-                        <input type="email" id="registerEmail" name="email" placeholder="Nhập email của bạn" required>
+                <div class="form-group half-width">
+                    <label for="lastName">Tên</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Nhập tên của bạn" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <div class="input-with-icon">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" name="email" placeholder="Nhập email của bạn" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="username">Tên đăng nhập</label>
+                <div class="input-with-icon">
+                    <i class="fas fa-at"></i>
+                    <input type="text" id="username" name="username" placeholder="Chọn tên đăng nhập" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Mật khẩu</label>
+                <div class="input-with-icon">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" name="password" placeholder="Tạo mật khẩu" required>
+                    <span class="toggle-password" onclick="togglePasswordVisibility('password')">
+                        <i class="fas fa-eye"></i>
+                    </span>
+                </div>
+                <div class="password-strength">
+                    <div class="strength-meter">
+                        <span class="strength-bar weak"></span>
+                        <span class="strength-bar medium"></span>
+                        <span class="strength-bar strong"></span>
                     </div>
+                    <small class="strength-text">Mật khẩu yếu</small>
                 </div>
-
-                <div class="form-group">
-                    <label for="registerPassword">Mật khẩu</label>
-                    <div class="input-with-icon">
-                        <i class="fas fa-lock"></i>
-                        <input type="password" id="registerPassword" name="password" placeholder="Nhập mật khẩu"
-                            required>
-                        <span class="toggle-password" onclick="togglePasswordVisibility('registerPassword')">
-                            <i class="fas fa-eye"></i>
-                        </span>
-                    </div>
-                    <div class="password-hint">
-                        <small>Mật khẩu phải có ít nhất 8 ký tự, bao gồm chữ hoa, chữ thường và số</small>
-                    </div>
+                <div class="password-hint">
+                    <small>Mật khẩu phải có ít nhất 8 ký tự, bao gồm chữ hoa, chữ thường, số và ký tự đặc biệt</small>
                 </div>
+            </div>
 
-                <div class="form-group">
-                    <label for="registerConfirmPassword">Xác nhận mật khẩu</label>
-                    <div class="input-with-icon">
-                        <i class="fas fa-lock"></i>
-                        <input type="password" id="registerConfirmPassword" name="confirmPassword"
-                            placeholder="Nhập lại mật khẩu" required>
-                    </div>
+            <div class="form-group">
+                <label for="confirmPassword">Xác nhận mật khẩu</label>
+                <div class="input-with-icon">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Nhập lại mật khẩu"
+                        required>
+                    <span class="toggle-password" onclick="togglePasswordVisibility('confirmPassword')">
+                        <i class="fas fa-eye"></i>
+                    </span>
                 </div>
+            </div>
 
-                <div class="form-group terms-group">
-                    <label class="terms-checkbox">
-                        <input type="checkbox" name="terms" required>
-                        Tôi đồng ý với <a href="#">Điều khoản dịch vụ</a> và <a href="#">Chính sách bảo mật</a>
-                    </label>
-                </div>
+            <div class="form-group terms-group">
+                <label class="terms-checkbox">
+                    <input type="checkbox" name="terms" required>
+                    Tôi đồng ý với <a href="#">Điều khoản dịch vụ</a> và <a href="#">Chính sách bảo mật</a>
+                </label>
+            </div>
 
-                <button type="submit" class="auth-button">Đăng ký</button>
+            <button type="submit" class="register-button">Đăng ký</button>
 
-                <div class="auth-switch">
-                    Đã có tài khoản? <a href="#" onclick="switchAuthForm('login')">Đăng nhập ngay</a>
-                </div>
-            </form>
-        </div>
+            <div class="login-promt">
+                Bạn đã có tài khoản? <a href="login.html">Đăng nhập tại đây</a>
+            </div>
+        </form>
     </div>
 
     <script src="../Assets/JS/resgister.js"></script>

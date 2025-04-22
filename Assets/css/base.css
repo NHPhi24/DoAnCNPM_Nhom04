@@ -1,7 +1,7 @@
 :root {
     --white-color: #fff;
     --black-color: #000;
-    --text-color: #333;
+    --dark-color: #333;
     --gray-color: rgb(87, 84, 84);
     --red-color: rgb(239, 52, 52);
     --blue-color: rgb(93, 177, 230);
@@ -19,12 +19,17 @@
 }
 
 body {
+    background: var(--gray-color);
+
+}
+
+.bodyweb {
     color: var(--text-color);
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     background: var(--gray-color);
+    min-height: 100vh;
 }
 
 *,
@@ -36,6 +41,8 @@ html {
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+
 
 .grid {
     width: 1200px;
@@ -92,4 +99,10 @@ p {
 
 .active {
     display: block;
+}
+
+.saperate {
+    width: 100%;
+    border-bottom: 1px solid var(--text-light);
+    margin-bottom: 20px;
 }
