@@ -215,6 +215,7 @@
 }
 
 .seat-note {
+    display: flex;
     text-align: center;
 }
 
@@ -262,4 +263,35 @@
     .seat-couple {
         width: 40px;
     }
+}
+
+/* payment: thanh toan */
+.payment {
+    display: flex;
+    justify-content: space-between;
+}
+
+.seat-chosed,
+.total {
+    display: flex;
+    text-align: center;
+}
+
+.seat-chosed label,
+.total label {
+    margin: auto 6px;
+}
+
+.seat-chosed p,
+.total p {
+    color: var(--warm-color);
+}
+
+.pay .btn {
+    font-size: 1.6rem;
+    margin: 0 8px;
+}
+
+.btn-pay {
+    background-color: var(--red-color);
 }

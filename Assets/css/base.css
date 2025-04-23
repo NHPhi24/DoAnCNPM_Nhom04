@@ -16,6 +16,7 @@
     --border-color: #2d3748;
     --error-color: #ff6b6b;
     --success-color: #51cf66;
+    --warm-color: #ffc107;
 }
 
 body {
@@ -30,6 +31,13 @@ body {
     align-items: center;
     background: var(--gray-color);
     min-height: 100vh;
+}
+
+* {
+    font-size: 1.6rem;
+    /* color: var(--text-color); */
+    margin: 0;
+    padding: 0;
 }
 
 *,
@@ -105,4 +113,16 @@ p {
     width: 100%;
     border-bottom: 1px solid var(--text-light);
     margin-bottom: 20px;
+}
+
+label {
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+
+.btn {
+    padding: 6px 12px;
+    border: 1px solid var(--dark-color);
+    border-radius: 12px;
+    cursor: pointer;
 }
