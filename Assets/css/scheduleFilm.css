@@ -1,0 +1,104 @@
+@import url(./base.css);
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.container>h1 {
+    font-size: 24px;
+    color: var(--white-color);
+    margin-bottom: 20px;
+}
+
+.FilmDay {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.btn_sch>p {
+    color: var(--dark-color);
+}
+
+.note {
+    margin: 10px 0;
+}
+
+.note>span,
+.note b {
+    font-size: 1.6rem;
+    color: var(--warm-color);
+}
+
+.content2 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.filmSch {
+    width: 49%;
+    height: 300px;
+    display: flex;
+    border: 1px solid var(--dark-color);
+    border-radius: 20px;
+
+
+}
+
+.filmSch>img {
+    width: calc(100%/3);
+    height: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.filmSch-right {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.category {
+    display: flex;
+}
+
+.category>p:first-child {
+    margin-right: 12px;
+}
+
+.category>p,
+.filmSch-right>p:first-child {
+    opacity: 60%;
+}
+
+
+.filmSch-right h1,
+.filmSch-right h3 {
+    color: var(--white-color);
+    font-size: 1.8rem;
+}
+
+.filmSch-right>p {
+    opacity: 90%;
+}
+
+.filmSch-right h3 {
+    font-size: 1.6rem;
+}
+
+.Lichchieu {
+    width: 17%;
+    text-align: center;
+    font-size: 12px;
+}
+
+.divbtn {
+    display: flex;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,5 @@
+@import url(./base.css);
+
+.AddFilm {
+    background-color: var(--black-color);
+}

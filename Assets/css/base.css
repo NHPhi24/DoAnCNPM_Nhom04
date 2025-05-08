@@ -1,0 +1,128 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --dark-color: #333;
+    --gray-color: rgb(87, 84, 84);
+    --red-color: rgb(239, 52, 52);
+    --blue-color: rgb(93, 177, 230);
+    --aqua-color: rgb(18, 247, 247);
+    --primary-color: #6c5ce7;
+    --primary-dark: #5649c0;
+    --background-dark: #1a1a2e;
+    --background-darker: #16213e;
+    --text-color: #e6e6e6;
+    --text-light: #f0f0f0;
+    --text-muted: #b8b8b8;
+    --border-color: #2d3748;
+    --error-color: #ff6b6b;
+    --success-color: #51cf66;
+    --warm-color: #ffc107;
+}
+
+body {
+    background: var(--gray-color);
+
+}
+
+.bodyweb {
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--gray-color);
+    min-height: 100vh;
+}
+
+* {
+    font-size: 1.6rem;
+    /* color: var(--text-color); */
+    margin: 0;
+    padding: 0;
+}
+
+*,
+html {
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width {
+    width: 100%;
+
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+ul>li>a {
+    text-decoration: none;
+    font-size: 1.8rem;
+}
+
+a {
+    font-size: 1.6rem;
+}
+
+p {
+    font-size: 1.8rem;
+    color: var(--white-color);
+}
+
+.text-warp {
+    word-break: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 24px;
+    /* fallback */
+    max-height: 72px;
+    /* fallback */
+    -webkit-line-clamp: 2;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.hide {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.saperate {
+    width: 100%;
+    border-bottom: 1px solid var(--text-light);
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+
+.btn {
+    padding: 6px 12px;
+    border: 1px solid var(--dark-color);
+    border-radius: 12px;
+    cursor: pointer;
+}
