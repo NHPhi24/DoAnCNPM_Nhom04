@@ -9,19 +9,27 @@ if (isset($_GET['act'])) {
             include "footer.php";
             break;
         case 'schedule':  
-            // include "header.php";  
+            include "header.php";  
             include "catalog/scheduleFilm.php";
             break;
         case 'ticket_price':
             include "header.php";
             include "catalog/TicketCost.php";
             break;
-        case 'promotions':
+        case 'admin_promotions':
             include "header.php";
-            include "catalog/promotions.php";
+            include "catalog/admin_promotions.php";
             break;
         case 'about':
             include "catalog/about.php";
+            break;
+        case 'manage_movies':
+            include "header.php";
+            include "catalog/manage_movies.php";
+            break;
+        case 'manage_tickets':
+            include "header.php";
+            include "catalog/manage_tickets.php";
             break;
         case 'register':
             include "Register.php";

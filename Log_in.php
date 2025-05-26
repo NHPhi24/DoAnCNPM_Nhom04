@@ -87,7 +87,7 @@
                             $_SESSION['role'] = $user['role'];
 
                             if ($user['role'] === 'admin') {
-                                header("Location: ./catalog/admin_dashboard.php");
+                                header("Location: ./admin_dashboard.php?id=" . $user['id']);
                             } else {
                                 // Chuyển hướng đến index.php với id của user
                                 header("Location: ./index.php?id=" . $user['id']);
