@@ -8,7 +8,7 @@ if (isset($_GET['act'])) {
             include "home.php";
             include "footer.php";
             break;
-        case 'schedule':  
+        case 'schedule':
             // include "header.php";  
             include "catalog/scheduleFilm.php";
             break;
@@ -47,4 +47,3 @@ if (isset($_GET['act'])) {
     include "home.php";
     include "footer.php";
 }
-?>
