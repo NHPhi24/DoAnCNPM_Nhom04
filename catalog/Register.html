@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký - Dark Theme</title>
+    <link rel="stylesheet" href="../Assets/css/resgistion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="bodyweb">
+    <div class="register-container">
+        <div class="register-header">
+            <h1>Tạo tài khoản mới</h1>
+            <p>Điền thông tin để bắt đầu trải nghiệm</p>
+        </div>
+
+        <form id="registerForm" class="register-form">
+            <div class="form-row">
+                <div class="form-group half-width">
+                    <label for="firstName">Họ</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="firstName" name="firstName" placeholder="Nhập họ của bạn" required>
+                    </div>
+                </div>
+
+                <div class="form-group half-width">
+                    <label for="lastName">Tên</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Nhập tên của bạn" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <div class="input-with-icon">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" name="email" placeholder="Nhập email của bạn" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="username">Tên đăng nhập</label>
+                <div class="input-with-icon">
+                    <i class="fas fa-at"></i>
+                    <input type="text" id="username" name="username" placeholder="Chọn tên đăng nhập" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Mật khẩu</label>
+                <div class="input-with-icon">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" name="password" placeholder="Tạo mật khẩu" required>
+                    <span class="toggle-password" onclick="togglePasswordVisibility('password')">
+                        <i class="fas fa-eye"></i>
+                    </span>
+                </div>
+                <div class="password-strength">
+                    <div class="strength-meter">
+                        <span class="strength-bar weak"></span>
+                        <span class="strength-bar medium"></span>
+                        <span class="strength-bar strong"></span>
+                    </div>
+                    <small class="strength-text">Mật khẩu yếu</small>
+                </div>
+                <div class="password-hint">
+                    <small>Mật khẩu phải có ít nhất 8 ký tự, bao gồm chữ hoa, chữ thường, số và ký tự đặc biệt</small>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Xác nhận mật khẩu</label>
+                <div class="input-with-icon">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Nhập lại mật khẩu"
+                        required>
+                    <span class="toggle-password" onclick="togglePasswordVisibility('confirmPassword')">
+                        <i class="fas fa-eye"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="form-group terms-group">
+                <label class="terms-checkbox">
+                    <input type="checkbox" name="terms" required>
+                    Tôi đồng ý với <a href="#">Điều khoản dịch vụ</a> và <a href="#">Chính sách bảo mật</a>
+                </label>
+            </div>
+
+            <button type="submit" class="register-button">Đăng ký</button>
+
+            <div class="login-promt">
+                Bạn đã có tài khoản? <a href="login.html">Đăng nhập tại đây</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="../Assets/JS/resgister.js"></script>
+</body>
+
+</html>

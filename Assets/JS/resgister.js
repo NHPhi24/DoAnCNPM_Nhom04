@@ -29,6 +29,7 @@ function checkPasswordStrength(password) {
         return;
     }
 
+
     let strength = 0;
     if (password.length >= 8) strength++;
     if (password.length >= 12) strength++;
@@ -36,6 +37,7 @@ function checkPasswordStrength(password) {
     if (/[a-z]/.test(password)) strength++;
     if (/[0-9]/.test(password)) strength++;
     if (/[^A-Za-z0-9]/.test(password)) strength++;
+
 
     if (strength <= 2) {
         strengthBars[0].classList.add('weak');
@@ -54,6 +56,7 @@ function checkPasswordStrength(password) {
         strengthText.style.color = 'var(--success-color)';
     }
 }
+
 
 // Theo dõi thay đổi mật khẩu để kiểm tra độ mạnh
 document.getElementById('password').addEventListener('input', function (e) {
